@@ -1,0 +1,5 @@
+En esta actividad vamos a realizar copias de seguridad de los datos de los usuarios en Windows 10. Además, crearemos una imagen de recuperación del sistema.
+
+Accede a una máquina virtual de Windows 10 y realiza los pasos que se muestran en el siguiente video:
+
+https://www.youtube.com/watch?v=nCxUxo7nuRM
