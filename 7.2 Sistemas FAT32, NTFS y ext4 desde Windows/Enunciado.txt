@@ -1,0 +1,9 @@
+En esta actividad vamos a comprobar las diferencias entre los sistemas de ficheros FAT32 y NTFS.
+
+También comprobaremos cómo, desde el sistema operativo de Windows no se puede acceder directamente a ficheros no nativos de Microsoft, en este caso los ficheros ext4 nativos de GNU/Linux.
+
+Envía un documento en formato .pdf con las capturas de los resultados obtenidos:
+
+1. Particiones del disco.
+
+2. Las carpetas con el nombre. Ej: 'nira' y las diferencias entre NTFS y FAT32
