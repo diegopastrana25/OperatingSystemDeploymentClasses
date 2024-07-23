@@ -1,0 +1,9 @@
+Agrupa las extensiones de archivo de la diapositiva 7 y 8 del Tema 7. Sistemas de Archivos en diferentes categorias como:
+
+-Archivos de Imagenes
+
+- Archivos de Texto
+
+- Archivos de Audio.
+
+-...
