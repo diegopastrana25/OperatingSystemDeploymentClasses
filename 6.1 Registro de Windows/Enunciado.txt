@@ -1,0 +1,29 @@
+CICLO FORMATIVO DE GRADO SUPERIOR - TÉCNICO EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN REDES
+
+IMPLANTACIÓN DE SISTEMAS OPERATIVOS
+
+REGISTRO DE WINDOWS
+
+El registro de Windows es una base de datos que almacena información de configuración del sistema y de aplicaciones de terceros instaladas en el sistema. La información que almacena del sistema incluye información y configuración del hardware, de los usuarios del sistema y del propio sistema operativo. Las aplicaciones tienen la posibilidad de almacenar información en el registro de Windows, la información de configuración que las aplicaciones consideren importante. Es una facilidad que el sistema operativo da a las aplicaciones para centralizar su configuración. 
+
+El registro de Windows está organizado de forma jerárquica en una estructura de árbol. Tiene dos elementos: las claves y los valores. Una clave es un contenedor que puede almacenar otras claves, subclaves, o valores. Hay cinco claves principales en el registro de Windows que organizan la configuración en cinco grandes bloques.
+
+Para editar y navegar por el registro de Windows utilizamos la herramienta regedit. También podemos buscarla.
+
+1. Busca la clave y echa un vistazo a los valores que almacena. Esta clave almacena valores que contienen aplicaciones que se van a ejecutar al iniciar sesión por el usuario.
+
+2. Exporta una clave. Antes de editar el registro de Windows es recomendable, sino obligatorio, crear una copia de seguridad de la clave que se va a modificar. Vamos a exportar la clave: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run.
+
+Ahora en el cuadro de dialogo de guardar, seleccionamos las opciones necesarias para almacenar una copia de seguridad de la rama actual, es decir de la clave en la que estamos y todo su contenido. Con esto se creará un fichero que almacenará todas las claves y valores almacenados bajo la clave HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run. Este fichero es un fichero de texto plano que podemos editar o mostrar para ver que es lo que se ha guardado. 
+
+Es un fichero que contiene, con una serie de símbolos especiales, la información de las claves y valores dentro de la clave HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run.
+
+3. Creando valores nuevos. Para crear un nuevo valor dentro de una clave, pulsamos con el botón secundario y elegimos la opción nuevo. Ahora tenemos que seleccionar el tipo de datos que almacenará el valor. En el caso práctico que vamos a realizar, crearemos un valor nuevo de tipo cadena de texto dentro de la clave: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run.
+
+Ahora seleccionamos un nombre significativo para el valor, en este caso, Notepad. Ahora tenemos que editar el contenido del valor para que contenga la ruta del ejecutable que queremos que se ejecute al inicio de sesión. Si, además, queremos pasarle algún parámetro extra podemos hacerlo.
+
+4. Para editar el valor, pulsamos con el botón secundario y elegimos modificar en el menú contextual.
+
+5. Vamos a comprobar que la configuración surte efecto en el sistema. Si es así, cuando iniciemos de nuevo sesión con el usuario debería abrirse el programa notepad.
+
+6. Vamos a consultar la configuración de programas de inicio en el administrador de tareas.
