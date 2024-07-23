@@ -1,0 +1,35 @@
+Guía - Compartir carpetas en red
+
+Para comenzar, tenemos que asegurarnos que tenemos habilitado la detección de redes y uso compartido de archivos. Habilitarlo es bastante sencillo:
+
+1º ACCEDER A LA SECCIÓN DE RED DEL EXPLORADOR DE ARCHIVOS
+
+A partir de aquí, si NO TENEMOS habilitado la configuración, nos aparecerá una barra amarilla indicándolo. Pinchamos encima y ACEPTAMOS la configuración. Si no aparece nada, es que todo estaba ya configurado (aceptaste la detección y compartir en redes cuando instalaste el S.O.).
+
+IMPORTANTE, REPETIR EN SERVIDOR Y WINDOWS 10.
+
+2º Compartir carpetas a través del explorador.
+
+Volvemos al explorador de archivos del SERVIDOR, pero esta vez vamos a la carpeta de Este Equipo → Disco local C:, donde vamos a crear una carpeta llamada COMPARTIDA.
+
+Vamos a acceder a la configuración a través de Click derecho → Propiedades → Compartir.
+
+Asegurarnos de dejar marcado la opción de compartir recurso, que el nombre del recurso es el mismo, darle a APLICAR y por último, ACEPTAR.
+
+Ya tenemos la carpeta compartida en la red. Vamos a Windows 10 para comprobar que todo funciona.
+
+3º Gestión de Permisos – Permisos de Dominio y Usuarios.
+
+Ya tenemos compartida la carpeta, pero aun nos falta configurar los permisos de acceso a dichos recursos. Desde Propiedades → Compartir, pinchamos en compartir.
+
+Ahora vamos a agregar permisos para todos los usuarios del dominio. De esta forma cualquier podrá acceder a los recursos mencionados. Pinchamos en el desplegable y seleccionamos Buscar Personas...
+
+Escribimos en el campo de texto Usuarios y le damos a Comprobar.
+
+En el buscador, seleccionamos Usuarios de Dominio y Aceptamos.
+
+Lo dejamos con permisos de solo lectura y le damos a compartir y listo.
+
+Por último, creamos un archivo de prueba en el SERVIDOR,
+
+Y accedemos desde Windows 10 al servidor, usando las credenciales de administrador.
