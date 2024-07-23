@@ -1,0 +1,42 @@
+IMPLANTACIÓN DE SISTEMAS OPERATIVOS
+
+INSTALACIÓN DE SOFTWARE POR GPO (GESTIÓN DE DIRECTIVAS DE GRUPO)
+
+En esta actividad vamos a configurar las directivas de grupo para poder instalar un software de manera automática al iniciar sesión en los equipos cliente que están conectados al servidor. Vamos a realizar la instalación de Google en los equipos.
+
+1. Descarga el archivo .msi en Windows Server.
+https://support.google.com/chrome/a/answer/9268614?hl=en
+
+2. Descomprime la carpeta y accede a la carpeta Installers:
+
+3. Copia el archivo .msi de Google Chrome y pégalo en la carpeta compartida que has creado anteriormente para compartir recursos con los usuarios del dominio.
+
+4. Accedemos a Usuarios y equipos de Active Directory para crear un grupo con los equipos a los que queremos instalarles el programa:
+Si no es posible acceder desde “usuarios y equipos de Active Directory” prueba a entrar desde el centro de administración:
+
+5. Creamos un grupo y añadimos todos los equipos al mismo:
+En miembros le damos a agregar:
+En Tipo de objetos podemos seleccionar ‘Equipos’ y añadimos el nombre de los equipos. En ‘Comprobar nombres’ comprobamos que el nombre se ha introducido correctamente. Si está correcto, el nombre se subraya.
+
+6. Accede a Administración de directivas de grupo.
+
+7. Puedes ver el dominio creado: en este caso es “nira.local”
+
+8. Con el botón derecho, pulsamos sobre el dominio y pulsamos sobre “Crear un GPO en este dominio y vincularlo aquí!
+
+9. Le asignamos un nombre, en este caso, “software”.
+Ya se nos ha creado un nuevo GPO “software”. Pulsando con el botón derecho, le damos a Editar. Se nos abre una ventana como la siguiente:
+
+10. Accedemos a Directivas – Configuración de software – Instalación de software. Con el botón derecho accedemos a Nuevo – Paquete.
+
+11. Seleccionamos el programa que queremos instalar: Pulsamos sobre ‘Asignada’.
+
+12. Con el botón derecho, accedemos a Propiedades. Queremos seleccionar la casilla de “Instalar esta aplicación durante el inicio de sesión”. Si aparece desactivada como en la imagen anterior, basta con pulsar sobre “Asignada”. Aplicamos los cambios y aceptamos.
+
+13. Actualizamos las directivas.
+
+14. Reiniciamos el Windows Server para asegurarnos de que se han producido los cambios.
+
+15. Abrimos el equipo cliente (Windows 10) y realizamos la misma actualización.
+
+16. Reiniciamos el sistema para asegurarnos de que se han producido los cambios y se ha instalado el programa deseado.
