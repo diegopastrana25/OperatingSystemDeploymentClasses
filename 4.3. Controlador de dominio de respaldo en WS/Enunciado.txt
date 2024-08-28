@@ -1,0 +1,33 @@
+PRÁCTICA 2. Añadir controlador de dominio de respaldo. 
+Los controladores de dominio de respaldo sirven para trabajar de manera secundaria a un 
+dominio ya creado, de manera que funcionen en caso de que haya un fallo o una caída en 
+el dominio principal. 
+Pasos a seguir: 
+1. Instalamos Windows Server 2016, 2019 o 2022 en una máquina virtual con las 
+mismas características de la primera. En este caso no es necesario crear una 
+partición del disco duro. 
+2. Configuramos los adaptadores de red para que la máquina pueda conectarse a una 
+red interna. 
+3. Cambiamos el nombre al equipo. En el ejemplo del primer Servidor, el nombre es 
+‘SERVER’. En este servidor secundario le podemos poner ‘SERVER2’ 
+4. Configuramos la red local - 
+Nombre de la red: LAN 
+- - 
+Dirección IP: Por ejemplo IP 10.1.1.123/24 
+DNS: La dirección IP del servidor principal. 
+5. Instalación del rol de Servicios de dominio de Active Directory: 
+En este caso, seleccionamos ‘Agregar un controlador de dominio a un dominio 
+existente’ y añadimos el nombre del dominio creado en la práctica anterior. 
+Una vez agregado el dominio, debemos proporcionar las credenciales para la operación de 
+implementación (en este ejemplo es Administrador@nira.local) 
+Dentro de Opciones Adicionales, seleccionamos nuestro dominio en lugar de ‘Cualquier 
+controlador de dominio’. 
+Finalizamos la instalación y reiniciamos. 
+6. Hacemos ping a nuestro servidor principal: ping SERVER.nira.local 
+7. Hacemos ping a este nuevo servidor: ping SERVER2.nira.local 
+Buscamos el 
+dominio 
+8. Accedemos a Herramientas - DNS y comprobamos que en SERVER2 también 
+disponemos de la zona de nuestro dominio principal (EJ: ‘nira.local’) 
+Lo que ha sucedido es que se ha duplicado la información del servidor principal, para que el 
+servidor secundario pueda ocupar su lugar en caso de que sea necesario.
