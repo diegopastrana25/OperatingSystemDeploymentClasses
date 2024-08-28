@@ -1,0 +1,86 @@
+PRÁCTICA 1. Manejando Linux en Halloween
+
+En esta actividad vamos a aprender a usar los comandos explicados en el aula. Si tienes alguna duda con respecto a los comandos, se recomienda consultar las páginas man además de los apuntes de clase. ‘man’ es una herramienta utilizada para documentar y aprender sobre comandos, archivos, y llamadas de sistema de GNU/Linux. (Prueba a escribir man seguido del comando del que necesitas obtener información)
+
+Añade capturas de pantalla de toda la ventana de la terminal en las preguntas en las que haya que ejecutar comandos. Se comprobará que el nombre del usuario sea el tuyo.
+
+¡ÁNIMO! 
+
+
+
+
+Responde a las siguientes preguntas:
+
+1.	¿En qué directorio se encuentran los ficheros de configuración del sistema?
+
+2.	 Para entrar en un sistema Linux hace falta:
+a) nombre de usuario, contraseña y dirección IP
+b) nombre de usuario y contraseña
+c) únicamente una contraseña.
+
+3.	Muestra el contenido del directorio actual.
+
+4.	Muestra el contenido del directorio que está justo a un nivel superior.
+
+5.	¿Cuál es tu fecha de nacimiento? Utiliza la instrucción cal seguido de tu año para averiguar en qué día de la semana naciste.
+
+6.	Crea los siguientes directorios desde la terminal.
+
+/home/usuario	/Documento s	/ASIR	/curso1	/ISO	/teoria
+/actividades
+/apuntes
+				/Hardware	/teoria
+/actividades
+	/Imágenes	/2022	/octubre	/halloween	
+	/Música	/Favoritos			
+	/Escritorio	/curiosidades		
+	
+
+Usa también un comando para mostrar el contenido de los directorios, tal y como se incluye en el manual práctico.
+
+7.	Crea un fichero vacío desde la terminal llamado ‘halloween’. 
+Muestra el contenido del directorio para comprobar que se ha creado correctamente. 
+
+8. Guarda el archivo anterior en la carpeta /curiosidades que está en el escritorio.
+Muestra el contenido del directorio para comprobar que se ha creado correctamente.
+
+9. Muestra el contenido del fichero creado. ¿Qué aparece? Añade captura de pantalla y justifica tu respuesta.
+
+10. Usa cualquier editor de texto (nano, mcedit, vi…) para escribir en el archivo ‘halloween’ la siguiente frase: ‘Estoy deseando que llegue Halloween’
+Visualiza el archivo desde la terminal.
+
+8. Abre la siguiente página web desde la terminal:
+https://www.nationalgeographic.es/ciencia/halloween-disfraces-historia-mitos-y-mucho-mas
+
+-	Para abrirla vamos a usar el navegador Lynx. La mayoría de las distribuciones de Linux tienen el paquete de Lynx en los repositorios. 
+-	Instala Lynx usando el comando de instalación aprendido. 
+-	Para visualizar la página web, escribe el comando ‘lynx’ seguido de la dirección web.
+-	Investiga y navega por la web usando las flechas.
+
+9. De la página web anterior, copia todo el texto correspondiente al título ‘Las leyendas urbanas de Halloween’ y añádelo al archivo de Halloween desde el editor de texto.
+
+10. Muestra el contenido del fichero en pantalla de tres maneras distintas:
+A. Mostrando toda la información del fichero.
+B. Mostrando el primer párrafo.
+C. Mostrando el último párrafo.
+
+11.	Guarda dos documentos titulados ‘creepy1’ y ‘creepy2’ en la carpeta de curiosidades. En creepy1 escribe “Hoy está permitido ser un poco fantasma” y en creepy2 escribe “La vida no es divertida sin un buen susto”. 
+Muestra la información de ambos documentos en la terminal usando una instrucción que permita mostrar el contenido de todos los archivos que empiecen por ‘cr’
+
+12.	Descarga una imagen de ‘Halloween’. Copia esa imagen desde el directorio Descargas al directorio ‘halloween’ que se encuentra en Imágenes usando comandos.
+/home/usuario	/Documento s	/ASIR	/curso1	/ISO	/teoria
+/actividades
+/apuntes
+				/Hardware	/teoria
+/actividades
+	/Imágenes	/2022	/octubre	/halloween	
+	/Música	/Favoritos			
+	/Escritorio	/curiosidades		
+	
+
+13.	Cambia el nombre del directorio “halloween” por “terrorífico”. Crea “calabaza” en el mismo nivel de “terrorifico” y mueve los ficheros guardados desde terrorífico a calabaza.
+ 
+14.	Borra el directorio /octubre/terrorifico. 
+
+15.	Por último, instala el comando figlet. 
+Escribe: figlet This is Halloween
