@@ -1,0 +1,39 @@
+Ejercicios
+
+1.- Indique que es el Directorio Activo ( 1.- punto)
+
+2.- Explique qué es un dominio ( 1.- punto)
+
+3.- Explique para qué sirven las unidades organizativas ( 1.- punto)
+
+4.- Cree 2 cuentas de usuario global en el Directorio Activo ( 1.- punto)
+
+5.- Establezca un limitación horaria a las 2 cuentas creadas anteriormente ( 1.- punto)
+
+6.- Cree una cuenta de grupo en el Directorio Activo ( 1.- punto)
+
+7.- Haga miembro de grupo a los 2 usuarios que creó anteriormente
+( 1.- punto)
+
+8.- Indique que afirmación es falsa: ( 1.- punto)
+
+a.	Las unidades organizativas son contenedores del Directorio Activo
+b.	Una unidad organizativa puede contener objetos de otros dominios
+c.	En la unidad organizativa, se pueden colocar usuarios, grupos, equipos y otras unidades organizativas
+d.	Todas las respuestas anteriores son falsas
+
+9.- Indique que afirmación es verdadera: ( 1.- punto)
+
+a.	Los grupos locales pueden crearse en equipos que tienen instalados en el Directorio Activo
+b.	Los grupos de ámbito global se denominan también grupos universales
+c.	La conversión de grupo global a universal solo se permite si el grupo global que se desea convertir es miembro de otro de ámbito global
+d.	Un grupo de seguridad puede convertirse en grupo de distribución y viceversa, en cualquier momento si el administrador ha habilitado el funcionamiento en modo native de Windows 2000 o superior. Si esto no es así, no se podrá realizar la conversión
+
+
+
+10.- Además de los usuarios y grupos que se crearon en la instalación , existen unas identidades especiales determinadas. Indique cual de las siguientes no es una de ellas: ( 1.- punto)
+
+a.	Todos
+b.	Creador Owner o Propietario Creador
+c.	El usuario administrador
+d.	Interactivo o Interactive
