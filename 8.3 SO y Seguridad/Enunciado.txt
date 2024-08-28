@@ -1,0 +1,12 @@
+En esta práctica se pretende que aprendas a activardesactivar contraseñas de seguridad. Para ello debemos hacer lo siguiente
+
+•	 1.1.- Leer los apartados 4 y 5 del fichero adjunto denominado ¨Sistemas Operativos. Seguridad¨. Averiguar la configuración para Windows 10
+ 
+•	1.2.- Utilizando la máquina virtual creada en tú equipo, que debe tener , al menos, estas características
+
+o	Memoria RAM 4096 MB o similar
+o	Capacidad de disco duro 40 GB o similar
+
+Crear una cuenta de usuario llamada TuNombre_Apellidos (ej JoseMiguel_Alonso) desde la consola de usuarios locales indicando que debe cambia de contraseñas en el primer inicio de sesión. 
+Establecer que en el historial de contraseñas, es de 5 y la longitud mínima es de 4 caracteres. Poner de contraseña 2122 e inmediatamente después cambiarla a otra ( por ejemplo 1234 ) Intentar volver a ponerle la contraseña 2122. Evidentemente, como queremos que la contraseña sea 2122 , debemos deshabilitar la complejidad exigible en las contraseñas. 
+Adjunta, como habitualmente, ¨capturas de pantallas y comentarios¨ que justifiquen los pasos para alcanzar lo solicitado. 
