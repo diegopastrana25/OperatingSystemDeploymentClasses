@@ -1,0 +1,27 @@
+1.- ¿Qué es RAID?. Indica las diferencias entre RAID 1 y RAID 5 
+( 1.- punto)
+
+2.- Indicar los diferentes tipos de copias de seguridad, ventajas e inconvenientes ( 1.- punto)
+
+3.- Establezca  una cuota de 300 MB para todos los usuarios en el disco de datos y 250 MB como nivel de advertencia. Así mismo, indique  que se registre un evento cuándo un usuario supere dicho límite y otro cuando supere el nivel de advertencia ( 3.- puntos)
+
+4.- Si un usuario tiene acceso a dos carpetas del servidor y tiene una cuota de disco de 100 MB ¿ cuánta información puede almacenar en cada carpeta? ( 1.- punto)
+
+5.- Indique que afirmación es falsa: ( 1.- punto)
+
+a.	Un disco básico es un disco que contiene particiones primarias, particiones extendidas o unidades lógicas
+b.	Un disco dinámico es un disco físicoque piede contener volúmenes distribuidos volúmenes seccionados voúmenes reflejados y volúmenes RAID 5
+c.	Un conjunto de espejo se corresponde con RAID 5
+d.	El equivalente al conjunto de volúmenes en los discos dinámicos es un volume distribuido 
+
+6.- Indique que afirmación es verdadera: ( 1.- punto)
+
+a.	Un conjunto de bandas sin paridad  dividirá cada uno de los discos duros en partes pequeñas llamadas bandas
+b.	Un conjunto de bandas con paridad utilizará una banda de cada fila del disco duro para gurdar información de paridad de todas las bandas de esa fila (así, si tiene 5 discos duros y cada uno tiene 10 bandas, diremos que hay 10 filas de 5 bandas cada una y en cada fila hay una banda denominada de paridad)
+c.	Un conjunto de espejos indica 2 particiones de 2 discos duros distintos que se configuran para que una sea idéntica a la otra
+d.	Las tres respuestas anteriores son verdaderas
+
+
+7.- Explica detalladamente los tipos de compresión que disponemos habitualmente ( 1.- punto)
+
+8.- Explica detalladamente las cuotas de disco ( 1.- punto)
