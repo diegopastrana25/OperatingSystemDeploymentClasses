@@ -1,0 +1,191 @@
+CICLO FORMATIVO DE GRADO SUPERIOR - TÉCNICO EN 
+ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN 
+REDES 
+IMPLANTACIÓN DE  SISTEMAS OPERATIVOS 
+VirtualBox - UBUNTU 
+Compartir Recursos I. Guest additions 
+Vamos a realizar una tarea en la que configuraremos la máquina Ubuntu para que 
+podamos compartir una serie de recursos entre el Hipervisor y la máquina virtual. 
+Existen una serie de herramientas que nos permiten mecanismos de comunicación 
+entre la máquina virtual y el hipervisor. No sólo a través de la configuración de la 
+red, sino también herramientas útiles para el trabajo diario con estas máquinas 
+virtuales: 
+• Establecer carpetas compartidas entre el Hipervisor y la MV 
+• La posibilidad de añadir texto, enlaces, etc, en el hipervisor y pegar ese 
+contenido en el sistema virtualizado (y viceversa). 
+• Permitir el uso de arrastrar y soltar ficheros entre el Hipervisor y la MV. 
+
+Para poder utilizar todas las posibilidades que nos ofrece VirtualBox para trabajar 
+con las máquinas virtuales, utilizar memorias USBs en nuestras máquinas, pasarnos 
+ficheros, copiar y pegar del portapapeles entre máquinas, etc, necesitamos instalar 
+en el sistema virtualizado una serie de programas que le indican al sistema operativo 
+virtualizado como debe interactuar con esos recursos que le van a ser ofrecidos 
+desde el hipervisor. 
+Estos programas se denominan las Guest Additions y, a continuación, veremos 
+una serie de pasos que se deben seguir para su instalación: 
+1. Instalación de las Guest Additions 
+En el menú Dispositivos del VirtualBox y con la máquina virtual encendida y con la 
+sesión iniciada, activamos la opción: 
+Insertar imagen de CD de las <<Guest Additions>>... 
+Cuando lo hacemos en el sistema virtualizado nos aparece en el Escritorio el icono 
+del CD que acabamos de insertar (montar), esto es un comportamiento habitual en 
+los Escritorios de GNU/LinuX.  
+Si no nos aparece en el escritorio, accedemos a Este equipo y encontraremos la 
+Unidad de CD.  
+Abrimos el CD y vemos el contenido. Podemos observar que hay distintos ficheros, 
+cada uno preparado para ser instalado en los diferentes sistemas y arquitecturas 
+habituales que se virtualizan: 
+• Windows (32 bits) 
+• Windows (64 bits) 
+• GNU/LinuX 
+• Solaris 
+En Windows seleccionamos ‘VBoz WindowsAdditions-amd64’. 
+En Ubuntu lo que haremos será abrir una terminal y ejecutar el instalador. Como 
+funciona la terminal lo veremos más adelante en el módulo, así como una 
+explicación más detallada de las acciones que vamos a realizar ahora, sin embargo, 
+son un buen punto de partida para establecer un entorno de trabajo y pruebas más 
+eficiente y cómodo. 
+2. Instalando desde el terminal 
+Para abrir un terminal, pulsaremos botón derecho en el explorador de ficheros y 
+seleccionaremos la opción: Abrir un terminal aquí. 
+Una vez abierto ejecutaremos el script de autorun.sh que se encuentra en la 
+carpeta, para ello escribiremos en la terminal: 
+./autorun.sh 
+Esta ejecución requiere de privilegios de administración. Introduciremos la 
+contraseña de administrador. 
+Al ejecutarlo, nos aparece una serie de mensajes acerca del progreso de la 
+instalación, si leemos los mensajes nos daremos cuenta de que nos pide Por 
+favor que instalemos : gcc, make y perl para nuestra distribución. 
+3. Instalando paquetes requeridos 
+Ahora debemos ejecutar una orden en la terminal que permite descargar los 
+paquetes desde los repositorios y los instala.  
+sudo apt install gcc make perl 
+A continuación, nos muestra que se van a instalar una serie de paquetes y nos pide 
+confirmación, tal y como vemos en la imagen. 
+Ahora si volvemos a ejecutar el script de autorun.sh no nos dará ningún mensaje de 
+error.  
+Una vez realizado este paso, es conveniente reiniciar el sistema virtualizado. 
+4. Portapapeles 
+Ahora ya tenemos el portapapeles compartido habilitado entre nuestro hipervisor y 
+la máquina virtual, podemos decidir, la direccionalidad de este portapapeles. 
+• Inhabilitado 
+• Hipervisor -> MV 
+• MV -> Hipervisor 
+• MV <-> Hipervisor 
+Esto nos será muy útil para seguir manuales, buscar errores en Internet cuando la 
+máquina virtualizada no tenga conexión o cuando no tengamos el navegador 
+abierto, para la elaboración de documentación, etc. 
+Ejercicio 
+Realiza todas las configuraciones que hemos visto en la tarea y avisa al docente 
+para que compruebe que todo funciona. 
+Compartir Recursos II. Carpetas compartidas 
+Vamos a configurar en nuestro hipervisor una carpeta que montaremos desde 
+nuestra máquina virtual. Esta nos servirá para compartir ficheros entre el hipervisor 
+y el sistema virtual. Nos permitirá pasar enunciados, software, scripts y todo lo que 
+necesitemos compartir en forma de fichero. 
+1. Creación de la carpeta en el Hipervisor o Host 
+Lo primero será crea una carpeta en nuestra máquina hipervisora que será donde 
+coloquemos los ficheros para ser compartidos. 
+Por ejemplo, en nuestra carpeta personal: 
+/home/alumno/ 
+Crearemos una carpeta cuyo nombre será: VBoxShared 
+Una vez creada, vamos al VirtualBox y en el menú de carpetas compartidas 
+seleccionamos esa carpeta que acabamos de crear. 
+2. Creación del punto de montaje en el Sistema Virtualizado 
+Ahora arrancamos la máquina virtual y creamos una carpeta que será nuestro punto 
+de montaje para la carpeta compartida. Este concepto de punto de montaje así 
+como los permisos de usuario y grupo que veremos en esta práctica serán 
+desarrollados más adelante en el módulo. 
+Crearemos una carpeta cuyo nombre será: CompartidaVBox 
+(Ambas carpetas podrían tener el mismo nombre sin problema) 
+OPCIÓN A. La creamos mediante la terminal con la orden mkdir CompartidaVBox  
+OPCIÓN B. Directamente desde el escritorio seleccionamos una ‘Nueva carpeta’ 
+con el botón derecho.  
+Para saber la dirección de la carpeta, podemos seleccionar ‘propiedades’ y copiar 
+la dirección de ‘carpeta padre’.  
+3. Montaje de la carpeta compartida 
+Para realizar el montaje de la carpeta compartida debemos: 
+OPCIÓN A. Ejecutar un comando en la terminal que nos monta la carpeta 
+compartida desde el hipervisor en la ruta especificada. Este comando es mount 
+Este comando es capaz de enlazar o montar en nuestra carpeta de la máquina 
+virtual el sistema de ficheros que está siendo ofrecido por el hipervisor.  
+Además, en el comando vemos algunos parámetros que nos ofrecen información 
+acerca de cómo funcionan los montajes de unidades. 
+sudo mount -o uid=1000,gid=1000 -t vboxsf VBoxshared CompartidaVBox 
+Si la terminal no nos muestra ningún mensaje, entonces es que la operación ha sido 
+efectuada con éxito. 
+Si ejecutamos: cd CompartidaVBox/ y luego el comando ls (*ojo. Es una L minúscula) 
+Comprobamos que no existe ningún fichero en la carpeta, al igual que desde el 
+hipervisor. 
+OPCIÓN B. Agregamos la carpeta compartida en configuración. 
+La ruta de la carpeta es la de la creada en nuestro ordenador. - 
+Seleccionamos automontar y hacer permanente. 
+El punto de montaje es la dirección de nuestra carpeta creada en la máquina virtual. 
+4. Comprobación del resultado 
+Ahora podemos crear un pequeño fichero en nuestro ordenador anfitrión y 
+comprobar que aparece en nuestra máquina virtual. 
+Creamos un documento y lo guardamos en la carpeta creada en el escritorio del 
+anfitrión.  
+Al intentar acceder a la carpeta desde la VM, nos saltará un error: 
+Esto quiere decir que necesitamos agregar permisos a las carpetas compartidas. 
+Para ello, abrimos la terminal y ejecutamos el comando sudo adduser Nombre 
+vboxsf 
+Introducimos la contraseña de inicio de usuario. 
+*En nombre ponemos nuestro nombre. 
+El fichero ahora está accesible desde los dos sistemas. 
+Probamos y si sigue dando error, reiniciamos la máquina.  
+5. Algunas consideraciones adicionales 
+Estas dos consideraciones no son obligatorias, pero pueden ser realizadas si las 
+consideramos interesantes. 
+mount 
+Si ejecutamos la orden mount sin parámetros, nos muestra todos los puntos de 
+montaje activos del sistema. Si en esa lista vemos la carpeta compartida, es que 
+hemos realizado de manera correcta su montaje. 
+/etc/fstab 
+Si quisieramos realizar esta compartición de carpetas de manera persistente 
+deberíamos indicarlo en el fichero de puntos de montaje del equipo. Esto también 
+se verá en temas posteriores. 
+Importante: el fichero /etc/fstab es uno de los más importantes en un sistema 
+GNU/LinuX, y su edición ha de realizarse con cuidado. Si dejamos un fichero con 
+errores y reiniciamos la máquina, lo más probable es que no consigamos arrancar 
+de manera exitosa. Debemos de asegurarnos que todo está bien antes de reiniciar. 
+Ejercicio 
+Realiza los pasos que se han descrito en la práctica y adjunta una captura de 
+pantalla que muestre el contenido del mismo fichero accediendo desde desde 
+ambos sistemas (Guest y Host) 
+Compartir Recursos III. USB 
+Elige un dispositivo USB de tipo Disco Duro, lector de tarjetas, cámara, etc. que no 
+sea ni el ratón, ni el teclado que estamos utilizando. 
+Sigue los siguientes pasos: 
+• Conecta el dispositivo al hipervisor. 
+• Abre el VirtualBox, en el menú de configuración de la MV, apartado USB. 
+• Haz click en el icono USB+ y elija el dispositivo de la lista. 
+• Elige el dispositivo que has conectado. 
+Si ahora arrancamos la MV vemos que podemos utilizar el dispositivo, sin embargo, 
+en el hipervisor este dispositivo ha dejado de estar disponible. 
+Conexión temporal 
+Para realizar una conexión temporal, lo haremos desde el icono que aparece en la 
+parte inferior de la ventana del VirtualBox. Si no realizamos un filtro esta conexión 
+será temporal, y al reiniciar la MV perderemos la conexión con el dispositivo. 
+Después de VirtualBox acceder al dispositivo USB, aparecerá en el sistema 
+operativo invitado. Su VM tendrá acceso a la misma funcionalidad que si fuera una 
+conexión directa.  
+Nota: solo una máquina virtual o física puede acceder al dispositivo USB al mismo 
+tiempo. 
+Creación de un filtro: 
+Con los filtros USB, puede montar un dispositivo USB específico en sus máquinas 
+virtuales VirtualBox en el modo predeterminado. Cuando la compatibilidad con USB 
+esté habilitada para un entorno virtual, podrá controlar qué dispositivos se 
+conectarán al sistema operativo invitado automáticamente. Esto se logra con los 
+filtros centrados en los parámetros específicos de un dispositivo USB. Los 
+dispositivos que coincidan con sus filtros creados se conectarán automáticamente 
+al sistema operativo invitado cuando estén vinculados al host. 
+Al configurar VirtualBox USB en el sistema operativo Windows 10, tendrá que 
+desconectar y volver a conectar el dispositivo USB. De lo contrario, ese dispositivo 
+no se verá afectado por los filtros creados para controlar su comportamiento. 
+Ejercicio 
+Realiza una conexión temporal con el dispositivo elegido. 
+Realiza un filtro con ese mismo dispositivo, comprueba que permanece incluso al 
+reiniciar la máquina. 
+¿Qué posibles usos le darías a este mecanismo? Redacta un documento explicando 
+el proceso y los usos. 
