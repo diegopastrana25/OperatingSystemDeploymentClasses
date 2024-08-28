@@ -1,0 +1,17 @@
+1.- Explicar qué es una MV y para qué sirve (1pto) 
+2.- Enumerar varios programas que permiten crear MV en Windows (1pto) 
+3.- Indicalos pasos seguidos para instalar una MV con VirtualBox(1pto) 
+4.- Indica los pasos seguidos para instalar una MV con VMware Workstation 
+Player(1pto) 
+5.- Indica los pasos para instalar VMware Tools (1pto) 
+6.-Indica los pasos para compartir carpetas de tu PC usandoMVware(1 pto) 
+7.- Indicar las diferencias que existe entre los modos de conexiones de red: 
+Bridge, NAT y Host-Only(1pto) 
+8.- Indica los pasos para instalar las GuestAdditions en VirtualBox con 
+Windows 10. (1pto) 
+9.- Indica los pasos para instalar las GuestAdditions en VirtualBox con 
+Ubuntu. (1pto) 
+10.-Indica los pasos para compartir carpetas de tu PC usandoVirtualBox 
+(1pto) 
+Adicional. Indica las dificultades encontradas en la instalación y configuración 
+de las máquinas virtuales, así como la realización de las actividades.
