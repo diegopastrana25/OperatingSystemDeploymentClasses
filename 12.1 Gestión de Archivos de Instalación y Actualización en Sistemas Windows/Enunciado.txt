@@ -1,0 +1,30 @@
+Ejercicios
+
+1.-  Buscar y descargar desde Internet algún archivo con extensión msi. ¿Para qué sirven estos archivos?
+
+2.- Indique qué afirmación es falsa:
+
+a.	Las actualizaciones automáticas añaden funciones nuevas, mejora las existentes y corrigen las inseguridades
+b.	Windows Update, no permite actualizaciones automáticas
+c.	Es conveniente tener actualizado el Sistema Operativo en red
+d.	Es mejor actualizar manualmente el S.O.en red
+
+3.- Indique qué afirmación es falsa: 
+
+a.	Los paquetes de distribución son paquetes de software que tienen la información necesaria para automatizar su instalación sin necesidad del usuario.
+b.	Los paquetes de instalación de software tienen la extensión mst
+c.	Los paquetes de instalación de software tienen la extensión msi
+d.	Los paquetes de distribución se ubicarán en un recurso compartido al que tienen acceso los usuarios del dominio.
+
+4.- Indique qué afirmación es falsa: 
+
+a.	La forma de instalar un nuevo programa en el PC depende de la ubicación de los archivos de instalación de dicho programa.
+b.	Windows únicamente permite desinstalar los programas de los que no se dispone de licencia.
+c.	Es posible que en la lista de programas instalados nos aparezcan todos los programas que hay en el equipo.
+d.	Únicamente se deben instalar programas en los que se disponga de licencia o que no la necesite.
+
+5.-  Buscar y descargar desde Internet algún archivo con extensión msp. Analizar sus características y comentar para qué sirven estos archivos.
+
+6.-  Buscar y descargar desde Internet algún archivo con extensión zap. Analizar sus características y comentar para que sirven estos archivos.
+
+
