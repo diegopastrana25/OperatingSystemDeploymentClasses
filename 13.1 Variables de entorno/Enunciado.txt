@@ -1,0 +1,13 @@
+1. Muestra en pantalla el contenido del directorio personal del usuario actual. Utiliza 
+una variable de entorno. 
+2. Muestra en pantalla la siguiente cadena de texto: «El nombre del usuario actual 
+es » seguido del nombre del usuario actual. Utiliza una variable de entorno. 
+3. Crea un directorio con el nombre del usuario actual en un directorio llamado ISO 
+que está en el raíz de la unidad C: 
+4. Muestra en pantalla el nombre del usuario actual, la fecha y hora actuales 
+separados por el caracter «:». 
+5. Crea un fichero de texto plano con el nombre usuarios.txt dentro del directorio 
+C:\ISO cuyo contenido sea el nombre del usuario actual, la fecha y hora actuales 
+separados por el caracter «:». 
+6. Añade al fichero C:\ISO\usuarios.txt el nombre del usuario actual, la fecha y la 
+hora separados por el caracter «:» 
