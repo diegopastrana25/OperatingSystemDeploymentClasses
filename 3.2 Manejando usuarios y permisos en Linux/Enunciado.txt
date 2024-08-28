@@ -1,0 +1,44 @@
+PRÁCTICA 2. Manejando usuarios y permisos en Linux
+
+En esta actividad vamos a aprender a usar los comandos para gestionar a los usuarios y sus permisos. Si tienes alguna duda con respecto a los comandos, se recomienda consultar las páginas man además de los apuntes de clase. ‘man’ es una herramienta utilizada para documentar y aprender sobre comandos, archivos, y llamadas de sistema de GNU/Linux. (Prueba a escribir man seguido del comando del que necesitas obtener información)
+
+Añade capturas de pantalla de toda la ventana de la terminal en las preguntas en las que haya que ejecutar comandos. Se comprobará que el nombre del usuario sea el tuyo.
+
+¡ÁNIMO! 
+
+
+
+
+Responde a las siguientes preguntas:
+
+1.	Crea los grupos oficina1 y oficina2.
+
+2.	Crea los usuarios pablo y pepe. Estos usuarios deben pertenecer únicamente al grupo oficina1.
+
+3.	Crea los usuarios alba y nerea. Estos usuarios deben pertenecer únicamente al grupo oficina2.
+
+4.	Como usuario paco crea un fichero con nombre topsecret.txt en su directorio de trabajo al que únicamente él tenga acceso, tanto de lectura como de escritura.
+
+5.	Crea otro fichero, también como usuario paco, con nombre ventas_trimestre.txt al que tengan acceso, tanto para leer como para escribir todos los usuarios que pertenezcan al mismo grupo. Se deben dejar los permisos que haya por defecto para el dueño y para el resto de usuarios. Comprueba como usuario pablo que puedes modificar el fichero.
+
+6.	Como usuario alba, crea un fichero con nombre empleados.txt al que pueda acceder cualquier usuario para leer su contenido, y cualquier usuario del mismo grupo para leer o escribir.
+
+7.	Copia el fichero empleados.txt al directorio de trabajo de alumno (crea también el usuario alumno si no está creado). Cambia el propietario y el grupo al que pertenece el fichero, ahora debe ser alumno.
+
+8.	Como usuario pablo, copia un programa del directorio /usr/bin al directorio de trabajo con un nombre diferente. Por ejemplo, xclock se puede copiar como reloj. Mira los permisos de este programa. Comprueba que se puede ejecutar. Puede que sea necesario dar permiso para que otros usuarios distintos al actual puedan ejecutar aplicaciones en el entorno gráfico, basta con ejecutar como administrador: xhost +.
+
+9.	Cambia los permisos de reloj de tal forma que sólo lo pueda ejecutar el propietario del archivo.
+
+10.	Crea el usuario alejandro, perteneciente a oficina2. Dentro de su directorio de trabajo, crea un directorio de nombre compartido_con_todos.
+
+11.	Cambia de usuario en el entorno gráfico (botón salir y botón cambiar de usuario) y entra como alejandro. Crea con OpenOffice.org Calc los ficheros telefono_contactos.ods, gastos_marzo.ods y sueldos.ods. Inserta varias entradas en cada uno de los ficheros y grábalo todo en el directorio compartido_con_todos.
+
+12.	Da permiso de lectura a la carpeta compartido_con_todos y a todos los ficheros que contenga para todos los usuarios.
+
+13.	Restringe el acceso de escritura sobre el fichero telefono_contactos para que sólo lo puedan modificar los usuarios del grupo al que pertenece su propietario.
+
+14.	Cambia los permisos de gastos_marzo para que sólo pueda modificarlo su propietario y leerlo cualquiera del mismo grupo.
+
+15.	Cambia los permisos de sueldos para que sólo su dueño tenga acceso a él, tanto para lectura como para escritura.
+
+16.	Si un usuario tiene permiso de lectura sobre un fichero, pero ese fichero se encuentra dentro de un directorio sobre el que no tiene permiso de lectura, ¿podrá leer el fichero?, haz la prueba.
