@@ -1,0 +1,23 @@
+Ejercicios
+
+1.- ¿Qué diferencia fundamental hay entre una directiva de seguridad y otra del grupo de Windows Server?(2.5.- pto)
+
+2.- Indica el orden de aplicación de las directivas de grupo (1.5.- pto)
+
+3.- Enumera y explica las directivas de grupo que vienen integradas en el Sistema Operativo(2.5- pto)
+
+4.-Indique que afirmación es verdadera: (1.- pto)
+
+a.	La directiva de grupo de la Udad Organizativa, prevalece sobre la directiva de grupo del sitio
+b.	La directiva de grupo de la Udad Organizativa, prevalece sobre la directiva de grupo del dominio
+c.	La directiva de grupo de la Udad Organizativa, prevalece sobre la directiva del controlador de dominio
+d.	La directiva de grupo de la Udad Organizativa, prevalece sobre la directiva del equipo local
+
+5.- Indique que afirmación es falsa: (1.- pto)
+
+a.	La directiva de seguridad local es la que es la que se debe utilizar si se desea modificar la configuración de seguridad de un equipo y dicho equipo no es un servidor Windows o no tiene instalado el Directorio Activo
+b.	La Directiva de Seguridad de Dominio es la que se debe utilizar si el Servidor Windows 2003/2008 es un controlador de dominio y se desea modificar la configuración de seguridad para todos los equipos que sean miembros del dominio
+c.	La Directiva de Seguridad del Controlador de Dominio es la que se debe utilizar si el Servidor Windows 2003/2008 no es un controlador de dominio y se desea modificar la configuración de seguridad para todos los equipos que sean controladores del dominio 
+d.	Puede haber Directivas de Seguridad para los sitios y para las Udes Organizativas
+
+6.- ¿Para qué se utiliza el comando: EJECUTAR COMO?(1.5.- pto)
