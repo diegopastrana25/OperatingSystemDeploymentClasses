@@ -1,0 +1,60 @@
+CICLO FORMATIVO DE GRADO SUPERIOR - TÉCNICO EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN REDES
+
+IMPLANTACIÓN DE SISTEMAS OPERATIVOS
+
+
+
+
+Nombre y apellidos:
+-
+Perfiles Móviles
+
+Una de las características más utilizadas en los dominios es la capacidad que tienen de facilitar el acceso a los diferentes recursos de los que dispone el sistema informático, al mismo tiempo que mantienen un control y seguridad sobre los mismos. En un dominio es más sencillo efectuar el seguimiento de las contraseñas y permisos, ya que lo tenemos todo centralizado.
+
+Cuando hablamos de usuarios en red, los perfiles móviles es la capacidad que tiene el sistema informático de permitir que los usuarios del mismo inicien sesión en diferentes equipos y sus datos, aplicaciones y configuraciones se mantengan sincronizados.
+
+Existen múltiples posibilidades para conseguir esta característica, así como diferentes grados de implementación.
+1.	Pasos Previos
+a.	Crear un nuevo volumen llamado Directorios Home
+
+Añadir a la máquina virtual donde tenemos instalado el controlador de dominio un nuevo disco duro de 50GB. Posteriormente, acceder al propio sistema operativo y configurar un nuevo volumen NTFS haciendo uso del espacio completo. Para repasar, ver Anexo I.
+
+
+
+
+b.	Actualizar la estructura del dominio.
+	
+	Ahora vamos a actualizar el directorio del dominio utilizando los usuarios de la práctica anterior. Desde la interfaz de Usuarios y Equipos, seleccionamos nuestro dominio y creamos 4 unidades organizacionales (OU): Técnicos, Administrativos, Publicistas y Clientes. Mover los usuarios creados previamente a esas OU.
+
+
+
+2.	Configurar el directorio Home para los usuarios.
+
+	Siguiendo las instrucciones del tutorial(How to Create Home Folder for AD Users in Windows Server 2022), configurar para los diferentes usuarios una carpeta home dentro del nuevo volumen, separando cada uno de los grupos en su subdirectorio. Por último, comprobar que desde Windows 10 se puede acceder a los distintos usuarios y escribir en la carpeta home seleccionada.
+
+
+ 
+Anexo I Crear y añadir discos a la MV.
+
+Desde configuración, clic en el icono de disco duro con el titulo de añadir disco duro
+
+ 
+
+Pulsar en crear disco duro y utilizar todas las opciones por defecto.	
+
+
+ 
+
+
+ 
+
+
+Confirmamos la configuración seleccionada.
+
+
+ 
+
+
+No olvidarse de seleccionar el disco nuevo y pulsar en Seleccionar.
+
+ 
