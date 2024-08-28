@@ -1,0 +1,1 @@
+Crea un documento explicando cada uno de los roles de Windows Server, incluyendo las herramientas que se tienen que instalar para cumplirlo.
