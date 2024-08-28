@@ -1,0 +1,253 @@
+PRÁCTICA 1. Instalación y configuración de Windows Server y el rol Active 
+Directory 
+1. Instalamos Windows Server 2016, 2019 o 2022 en una máquina virtual. 
+§ Descargamos la imagen ISO del S.O en la página web correspondiente. 
+§ Creamos la máquina virtual. 
+§ Versión. 
+Si instalamos Windows Server 2022 no aparecerá la opción de ese sistema operativo. No 
+importa, podemos seleccionar Windows 2019: 
+§ Añadimos las características de hardware:  
+RAM: Podemos mantener el tamaño que aparece por defecto de 2048 MB. 
+Disco duro:  
+Creamos el disco duro virtual con la opción de ‘reservado dinámicamente’. 
+                     
+ 
+ 
+ 
+ 
+ 
+Seleccionamos el tipo de archivo VDI 
+ 
+ 
+El tamaño mínimo recomendado es de 50GB. En nuestro caso, seleccionamos 100GB. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+§ Configuramos la máquina: 
+Sistema. 
+Habilitamos el PAE/NX sólo en el siguiente caso: Windows Server de 32 bits que se ejecuta 
+en sistema basado en x86. 
+PAE (Physical Address Extension) es una característica de procesador que permite que los 
+procesadores x86 puedan acceder a más de 4GB de memoria física. Algunas versiones de 
+32 bits de WS que se ejecutan en sistemas basados en x86 pueden usar PAE para tener 
+acceso a 64 GB o hasta 128 GB de memoria física, en función del tamaño de dirección física 
+del procesador. 
+Si nuestro Windows Server es de 64 bits, no es necesario habilitar esta característica. 
+                     
+ 
+ 
+Almacenamiento. 
+ 
+Añadimos la imagen virtual que hemos descargado previamente. 
+ 
+ 
+ 
+ 
+Red 
+ 
+Adaptador 1: NAT para la salida a internet 
+ 
+ 
+ 
+                     
+ 
+ 
+Adaptador 2: Red interna para la conexión del resto de ordenadores que irán conectados 
+al servidor. 
+ 
+ 
+ 
+ 
+§ Iniciamos la máquina virtual para la instalación del sistema operativo: 
+ 
+ 
+Seleccionamos el tipo de sistema operativo que queremos instalar: 
+El Windows Datacenter es la versión más completa de Windows Server y ofrece más 
+funcionalidades, pero este suele ser usado por clientes que necesitan cargas de trabajo más 
+exigentes, almacenamiento avanzado e implementación de ciertas aplicaciones. 
+En general, para una PYME es suficiente el Windows Standard. 
+En nuestro caso, seleccionamos la opción Standard Evaluation (experiencia de escritorio). 
+De este modo, dispondremos de un entorno gráfico.  
+Seleccionamos el tipo de instalación: Personalizar 
+Creamos una partición para instalar el Sistema Operativo: 
+                     
+ 
+ 
+ 
+ 
+ 
+Aunque en la imagen aparezca el tamaño total de 500 GB, nosotros hemos creado una 
+máquina virtual con 100 GB. 
+ 
+ 
+ 
+En ‘nuevo’ creamos una partición de 50 GB (aproximadamente 50000 MB) y seleccionamos 
+‘aplicar’. 
+ 
+Seleccionamos la partición 2 y picamos en siguiente: 
+Cuando aparezca esta información, no presionamos ninguna tecla. Esperamos a que inicie 
+Windows de manera automática. 
+                     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Ya se ha instalado Windows Server correctamente. Accedemos teniendo en cuenta que no 
+podrás acceder presionando Ctrl + Alt + Supr, aunque puedes modificarlo posteriormente. 
+2. Configuración de Windows Server 
+Se ha creado una cuenta de Administrador para acceder a nuestro Windows Server. 
+§ Accedemos con nuestra cuenta de usuario: 
+§ Permitimos que otros PC y dispositivos de esta red puedan detectar el PC: 
+§ Panel de Administrador del servidor: 
+Este panel se abre automáticamente al iniciar sesión en Windows Server. Desde el 
+‘Administrador del servidor’ podemos configurar todas las características necesarias para 
+nuestro servidor. 
+                     
+ 
+ 
+§ Servidor local: 
+ 
+ 
+ 
+En servidor local vamos a configurar el nombre del equipo y las redes. 
+ - Nombre del equipo: 
+ 
+En este caso, se llamará SERVER. 
+ 
+ 
+Reiniciamos para que se apliquen los cambios: 
+§ Configuración de red: 
+En Servidor local realizaremos las configuraciones oportunas en la red de área local para 
+poder crear un dominio y conectar equipos al servidor. 
+En primer lugar, vamos a cambiarle el nombre a la red Ethernet por red LAN, cuyas siglas 
+significan “Local Area Network”, es decir, red de área local. Lo haremos para Ethernet 2 que 
+será la red interna.  
+                     
+ 
+ 
+ 
+ 
+En nuestra red LAN Ahora vamos a deseleccionar la casilla de Protocolo de Internet versión 
+6, ya que no vamos a utilizarla. 
+ 
+ 
+Ahora accedemos a propiedades del Protocolo de Internet versión 4: 
+Vamos a configurar la red LAN de nuestro sistema WS2022 de forma manual. En esta 
+ocasión utilizaremos una subred de clase A.  
+Asignamos una dirección IP a nuestro servidor: 
+Por ejemplo, utilizamos la dirección IP 10.1.1.2. La dirección 10.1.1.1 será utilizada para la 
+puerta de enlace y el servidor DNS) y una máscara de subred 255.255.255.0.  
+En resumen, vamos a configurar el sistema WS2022 para que utilice la dirección IP 
+10.1.1.2/24. 
+Ahora vamos a hacer un ping a Google para comprobar que la red se ha configurado 
+correctamente: 
+Una vez configurada la red LAN, comprobamos que han cambiado los detalles en 
+propiedades. 
+3. Instalación del rol de Servicios de dominio de Active Directory:  
+Dentro de Administrador del servidor, accedemos a Administrar y Agregar roles y 
+características: 
+Seleccionamos la casilla de instalación basada en características o en roles, que ya aparece 
+seleccionada por defecto, y continuamos. 
+En Selección de servidor comprobamos que aparezca el nombre que le hemos puesto a 
+nuestro equipo, y la dirección IP correspondiente.  
+(*Esta imagen es un ejemplo. La dirección IP no se corresponde con la de esta práctica) 
+En Roles de servidor buscamos el rol ‘Servicios de Dominio de Active Directory’ y 
+seleccionamos su casilla: 
+Agregamos las características requeridas: 
+                     
+ 
+ 
+Mantenemos las categorías que están seleccionadas por defecto: 
+ 
+ 
+ 
+ 
+ 
+Comenzamos la instalación: 
+Una vez que se ha terminado de instalar el rol, salen algunos ‘errores’, pero son 
+configuraciones que no afectan a la realización de esta práctica. 
+En el panel, arriba a la derecha pulsamos sobre el error que nos salta y seleccionamos 
+“promover este equipo a controlador del dominio Active Directory”. 
+Se ha instalado el Servicio de controlador de dominio de AD, ahora tenemos que 
+configurarlo para que el sistema lleve a cabo su tarea de controlador de dominio según 
+nuestras necesidades. 
+Es la primera implementación que hacemos, por tanto, lo primero es agregar un nuevo 
+bosque y añadir el nombre de dominio raíz, por ejemplo, nira.local. 
+EJ: nira.local 
+En el nivel funcional del bosque y del dominio, conviene seleccionar un Windows Server 
+más antiguo, de modo que este servidor permita hacer la integración con otras plataformas 
+o sistemas operativos. 
+Podemos añadir una contraseña para todos aquellos procesos necesarios de restauración 
+de los servicios de directorio como el propio Active Directory. 
+                     
+ 
+ 
+ 
+ 
+ 
+ 
+EJ: NIRA 
+                     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4. Unir un equipo al dominio: 
+Para unir nuestro equipo Windows 10 al dominio, debemos configurar la interfaz de red del 
+equipo cliente. Es por esto por lo que lo haremos con nuestra máquina virtual de Windows 
+10. 
+La máquina deberá tener conexión con el controlador de dominio que acabamos de 
+configurar en Windows Server, y utilizar el DNS del dominio al que queremos añadir el 
+equipo. Para ello, deberemos cambiar la configuración de la red a red interna, o añadir un 
+nuevo adaptador de red para nuestra LAN. 
+En nuestro caso, configuraremos la dirección IP del adaptador del equipo cliente dentro del 
+dominio (10.1.1.0/24) y que utilice como servidor DNS el servidor DNS del dominio, que en 
+nuestro caso está en el controlador de dominio: 10.1.1.2. 
+Dirección libre dentro de la red 
+La dirección de nuestro 
+controlador de dominio 
+Hacemos ping a Google para comprobar que existe conexión: 
+Accedemos a la configuración del sistema para cambiar el grupo de trabajo al dominio: 
+Cambiamos el nombre de equipo: 
+Lo ideal es que sea un nombre del tipo: PC-01, PC-nombre, etc.. 
+Ahora, en lugar de pertenecer a un grupo de trabajo, deberá pertenecer al dominio que 
+hemos creado en Windows Server: 
+Ponemos el nombre del 
+dominio creado en WS 
+Te solicitará que incluyas el nombre y contraseña de un usuario con permisos del dominio. 
+Deberás incluir el usuario y contraseña del usuario de Windows Server. 
+Si todo ha ido correctamente, pedirá que reinicies el equipo para aplicar los cambios. 
+Una vez reiniciado el PC, podemos hacer un ping a nuestro servidor para saber si hay 
+conexión entre ambos. 
+5. Usuarios y equipos de Active Directory:  
+Para finalizar, deberemos comprobar en Windows Server que nuestro PC1 se ha conectado 
+correctamente al dominio. 
+Para ello,  en el Administrador del servidor accedemos a Herramientas y seguidamente a 
+Usuarios y equipos de Active Directory. 
+                     
+ 
+ 
+ 
+ 
+Esperamos a que cargue la ventana y dentro del dominio, seleccionamos ‘Computers’. El PC 
+de Windows 10 debería aparecer en el listado. 
+ 
+ 
+Si la conexión se ha realizado correctamente, podremos conectarnos a nuestro PC1 con 
+nuestra cuenta de administrador de Windows Server.  
+En nuestra máquina virtual de Windows 10, accedemos al equipo desde ‘otro usuario’ y 
+añadimos el usuario y contraseña que corresponde al de Windows Server. En mi caso, es 
+NIRA\Administrador.  
+Si no estás seguro de cuál es tu usuario, accede a configuración de tu Windows Server y 
+comprueba tu usuario
