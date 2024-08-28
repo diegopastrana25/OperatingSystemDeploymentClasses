@@ -1,0 +1,24 @@
+Indique que afirmación es falsa: ( 2.- puntos)
+
+a.	La copia de seguridad diaria se realiza con los archivos seleccionados que se hayan modificado en el día en que se realiza la copia de seguridad. Los archivos se marcan como copiados para que puedan volver a respaldarse cuando se desee
+b.	La copia de seguridad diferencial se realiza con los archivos creados o modificados desde la última copia de seguridad normal o incremental. Los archivos no se marcan como copiados para que puedan volver a respaldarse cuando se desee
+c.	La copia de seguridad incremental se realiza con los archivos creados o modificados desde la última copia de seguridad normal o incremental. Los archivos se marcan como copiados y ya no podrían volver a respaldarse hasta que se modifiquen
+d.	La copia de seguridad normal se realiza con los archivos seleccionados. Dichos archivos se marcan como copiados y ya no podrían volver a respaldarse hasta que se modifiquen
+
+2.- Indique que afirmación es falsa: ( 2.- puntos)
+
+a.	En un RAID 0  la información se divide entre todos los discos del Sistema, de forma que no se establece ningún tipo de redundancia
+b.	El RAID 1  es bastante caro, ya que se emplea el doble de espacio necesario
+c.	El RAID 5  es un sistema de discos independientes con integración de códigos de error mediante paridad, en donde los datos y la paridad se guardan en el mismo disco, por lo que se consigue aumentar la velocidad de la demanda
+d.	El RAID 5  la paridad se guarda en los discos que contienen los datos que han generado dicha paridad
+
+3.- Indique que afirmación es falsa: ( 2.- puntos)
+
+a.	Las cuotas de disco evitan que se utilice más espacio de disco del asignado y registran un suceso cuando un usuario sobrepasa dicho límite
+b.	Es conveniente establecer cuotas de sico en la partición del sistema
+c.	Es conveniente establecer utilizar 2 discos ( uno para el sistema y otro para los datos) o dividir el disco en 2 particiones ( uno para el sistema y otro para los datos) y establecer la cuota de disco en la correspondiente a los datos
+d.	Con las cuotas de disco es posible limitar el uso del espacio en disco de una manera personalizada
+
+4.- ¿Qué itinerario utilizarías para establecer las cuotas de usuario en las cuotas de un disco? ( 2.- puntos)
+
+5.- ¿Qué itinerario utilizarías para desfragmentar archivos en un disco?. ¿ Y para detectar los errores en una unidad de disco? ( 2.- puntos)
