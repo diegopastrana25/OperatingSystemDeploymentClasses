@@ -1,0 +1,3 @@
+¿Qué son los sistemas operativos con núcleos monolíticos?
+
+¿Qué son los sistemas con micronúcleos?
