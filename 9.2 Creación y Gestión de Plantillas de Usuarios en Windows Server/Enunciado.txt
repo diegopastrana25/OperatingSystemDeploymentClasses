@@ -1,0 +1,35 @@
+CICLO FORMATIVO DE GRADO SUPERIOR - TÉCNICO EN ADMINISTRACIÓN DE SISTEMAS INFORMÁTICOS EN REDES
+
+IMPLANTACION DE SISTEMAS OPERATIVOS
+
+
+
+Nombre y apellidos:
+-
+Actividad 9.2. Creación de plantillas de Usuarios
+
+Ya hemos visto en la unidad anterior como gestionar los usuarios y los grupos en un sistema local y en comparación, la creación de usuarios en dominios es bastante más compleja al manejar un numero mayor de recursos. 
+
+Para facilitar la tarea, empezaremos a practicar una de las virtudes de la informática, la automatización de los procesos. La principal ventaja es que reduce las posibilidades de fallo e incrementa la reproducibilidad de los posibles problemas que puedan surgir. Por ello siempre es una buena idea dedicarle un poco de tiempo a la automatización y creación de protocolos y guías de los procesos que llevamos a cabo como administradores de sistemas.
+
+El objetivo es crear una serie de plantillas de usuarios para posteriormente utilizarlas como base en la creación de nuevos usuarios que contengan las mismas características.
+
+Para ello, vamos a emular un esquema de personal que puede tener una empresa, conteniendo los siguientes grupos: Técnicos, Marketing, Administración y Clientes. Obviamente, cada grupo tendrá un conjunto de usuarios que necesitan unos requisitos u otros. 
+
+
+
+1.	Crea los grupos anteriores en Windows Server, asignando:
+-	A Técnicos, darle permisos totales y crearlo como grupo de seguridad de ámbito Universal.(revisa los permisos de Administrador)
+-	A Publicista y Administrativo, limitar los permisos a los de Usuarios Autentificados.
+-	A Clientes, crearlo como grupo de distribución.
+
+2.	Partiendo de estos grupos, crear los siguientes “plantillas” de perfiles de usuario:
+-	TecnicoDia, pertenece a Técnicos y tiene un horario de 7 a 14 h.
+-	TecnicoTarde, pertenece a Técnicos y tiene un horario de 14 a 21 h.
+-	Publicista, pertenece a Marketing y tiene un horario de 13 a 20 h.
+-	Administrativo, pertenece a Administración y tiene un horario de 8 a 16 h.
+-	Cliente, pertenece a Clientes.
+
+
+
+3.	Utilizando la utilidad de duplicar usuarios, partiendo de las “plantillas” crear 2 TecnicosDia, 3 TecnicosTarde, 2 Publicistas, 4 Administrativos y 6 Clientes.
